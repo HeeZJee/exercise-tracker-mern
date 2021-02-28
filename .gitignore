@@ -23,6 +23,5 @@ yarn-debug.log*
 yarn-error.log*
 
 # backend files
-**/node_modules
-**/.env
-**/dist
+backend/node_modules/
+backend/.env
