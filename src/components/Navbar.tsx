@@ -1,9 +1,7 @@
 import React, { ReactElement } from "react";
 import { Link } from "react-router-dom";
 
-interface Props {}
-
-export default function Navbar({}: Props): ReactElement {
+export default function Navbar(): ReactElement {
   return (
     <nav className="navbar navbar-dark bg-dark navbar-expand-lg">
       <Link to="/" className="navbar-brand">
