@@ -34,9 +34,7 @@ export default class CreateExercise extends Component<iExercise, iExercise> {
           });
         }
       })
-      .catch((error) => {
-        console.log(error);
-      });
+      .catch((err) => console.error(err));
   }
 
   onChangeUsername(e) {
@@ -77,7 +75,8 @@ export default class CreateExercise extends Component<iExercise, iExercise> {
 
     axios
       .post("http://localhost:5000/exercises/add", exercise)
-      .then((res) => console.log(res.data));
+      .then((res) => console.log(res.data))
+      .catch((err) => console.error(err));
 
     window.location.href = "/";
   }
