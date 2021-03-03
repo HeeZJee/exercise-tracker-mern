@@ -30,7 +30,8 @@ export default class CreateExercise extends Component<any, any> {
 
     axios
       .post("http://localhost:5000/users/add", newUser)
-      .then((res) => console.log(res.data));
+      .then((res) => console.log(res.data))
+      .catch((err) => console.error(err));
 
     this.setState({
       username: "",
