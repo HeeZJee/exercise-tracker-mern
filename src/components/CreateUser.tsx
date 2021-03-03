@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import axios from "axios";
 
 export default class CreateExercise extends Component<any, any> {
   constructor(props: any) {
@@ -26,6 +27,10 @@ export default class CreateExercise extends Component<any, any> {
       username: this.state.username,
     };
     console.log(newUser);
+
+    axios
+      .post("http://localhost:5000/users/add", newUser)
+      .then((res) => console.log(res.data));
 
     this.setState({
       username: "",
